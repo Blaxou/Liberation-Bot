@@ -1,0 +1,20 @@
+
+
+##### NOTE : THIS IS SUBJECT TO CHANGE AS THE PROJECT IS IN ITS EARLY DAYS
+
+##### NOTE2 : Feel free to submit any issues / suggestions on the github
+
+You can create your own parser by inserting your python name <college>.py
+
+This file must contain :
+
+  * One class named "Parser" of type object
+
+    This class must have :
+
+      - An attribute named "lesson_regexp" containing a Regular Expression that matches any of the lessons of your college
+
+      - A function named "check" that when executed sets self.librs to an array of liberations which are dictionnaries :
+      {'text':<The lesson text>,
+      'groups':<The groups returned when matched with self.lesson_regexp>,
+      'header':<The Title of the page (Leave a blank text if you won't use it)>}
