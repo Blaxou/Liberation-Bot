@@ -112,13 +112,13 @@ def not_a_cours(message):
     bot.reply_to(message, '⚠️ Cela ne semble pas être un cours !')
 
 
-def check_for_liberations():
+def check_for_liberations(first):
     global parser, interval
     reg = re.compile(parser.lesson_regexp)
     logger.info('Checking for liberations ...')
     last_librs = parser.librs
     parser.check()
-    if last_librs != parser.librs:
+    if last_librs != parser.librs or if first:
         logger.info('Sending notifs ...')
         db = mydb.read()
         for userID in db['users']:
@@ -131,7 +131,7 @@ def check_for_liberations():
         logger.info('No need to send notif, no change.')
 
     try :
-        threading.Timer(interval, check_for_liberations, ()).start()
+        threading.Timer(interval, check_for_liberations, (False)).start()
     except Exception as e :
         logger.critical(e)
         exit(1)
@@ -143,8 +143,8 @@ logger.info('Bot launched !')
 
 bot.polling()
 
-parser.check()
+parser.librs = None
 
 interval = 60
 
-check_for_liberations()
+check_for_liberations(True)
