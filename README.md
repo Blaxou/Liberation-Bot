@@ -1,5 +1,4 @@
-# Liberation Bot - Prix d’Informatique 2018
-### Gaëtan Schwartz
+# Liberation Bot - Prix d’Informatique 2018 - Gaëtan Schwartz
 
 ## Problématique
 
