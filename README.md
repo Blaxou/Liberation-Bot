@@ -34,3 +34,7 @@ Le programme est maintenant lancé. Nous pouvons accéder au `bot` [ici](https:/
 * [Stack Overflow](https://stackoverflow.com/)
 * [Documentation de Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 * [Documentation de l'API de Telegram](https://core.telegram.org/bots)
+
+## Contact
+
+Pour une quelconque question quant à ce projet, me contacter à gaetan(point)schwr(at)eduge(point)ch
