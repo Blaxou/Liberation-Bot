@@ -118,7 +118,7 @@ def check_for_liberations(first):
     logger.info('Checking for liberations ...')
     last_librs = parser.librs
     parser.check()
-    if last_librs != parser.librs or if first:
+    if last_librs != parser.librs or first:
         logger.info('Sending notifs ...')
         db = mydb.read()
         for userID in db['users']:
