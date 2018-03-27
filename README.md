@@ -9,7 +9,9 @@ https://cours.sismondi.ch/ecran-1/affichage_open.
 
 C'est ainsi que j'ai décider de créer *Liberation Bot*. Il permettrais de détecter les libérations quand il y en a et de nous notifier ces dernières par le biais de l'application [Telegram](http://t.me). Comment faire cela ? J'ai tout d'abord choisi Python comme language de programmation, car c'est le language avec lequel je suis le plus à l'aise. J'ai ensuite cherché une librairie facilitant l'intégration de l'API de Telegram dans Python, et j'ai opté pour [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI) qui était très bien documentée. J'ai ensuite cherché une librairie me premettant d'analyser l'HTMl en ainsi extraire les différentes informations du site, notre collège ne possédant bien évidemment pas d'API publique. J'opte ici pour [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) étant la référence en extraction d'HTML dans Python et ainsi extrêmement bien documentée. J'ai ensuite enregistré mon "Bot" dans Telegram et commencé à coder.
 
-## Résultat (Le projet en continuel développement, il risque d'évoluer)
+## Résultat
+
+NOTE : Le projet étant en continuel développement, il risque d'évoluer. Ce chapitre sera mis à jour en fonctions des modifications le plus rapidmement possible
 
 ### Utilisation
 
