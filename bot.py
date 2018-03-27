@@ -75,11 +75,10 @@ def c_reset_cours(message):
 
 @bot.message_handler(commands=['4'])
 def c_show_librs(message):
-    global parser
     if len(parser.librs) > 0:
         text = ''
         for l in parser.librs:
-            text += '\n • ' + l['text']
+            text += '\n • {} - {}'.format(l['text'],l['header'])
     else:
         text = "Il n'y a pas de libérations 😞"
     bot.reply_to(message, text)
@@ -113,7 +112,7 @@ def not_a_cours(message):
 
 
 def check_for_liberations(first):
-    global parser, interval
+    global interval
     reg = re.compile(parser.lesson_regexp)
     logger.info('Checking for liberations ...')
     last_librs = parser.librs
@@ -131,7 +130,7 @@ def check_for_liberations(first):
         logger.info('No need to send notif, no change.')
 
     try :
-        threading.Timer(interval, check_for_liberations, (False)).start()
+        threading.Timer(interval, check_for_liberations, (False,)).start()
     except Exception as e :
         logger.critical(e)
         exit(1)
@@ -141,10 +140,10 @@ def check_for_liberations(first):
 
 logger.info('Bot launched !')
 
-bot.polling()
-
 parser.librs = None
 
 interval = 60
 
 check_for_liberations(True)
+
+bot.polling()

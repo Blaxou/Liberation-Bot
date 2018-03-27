@@ -31,7 +31,7 @@ This parser parses liberations from college Sismondi's website
 
     def isLibr(self, el):
         header = el.find('h2', 'jou')
-        text = el.find('div', 'field')
+        text = el.find('strong')
         if not header or not text:
             return
         header = header.get_text()
@@ -48,7 +48,7 @@ This parser parses liberations from college Sismondi's website
 
     def check(self):
         self.get_page()
-        return self.parse_page()
+        self.parse_page()
 
 
 if __name__ == '__main__':
