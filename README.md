@@ -37,4 +37,4 @@ Le programme est maintenant lancé. Nous pouvons accéder au `bot` [ici](https:/
 
 ## Contact
 
-Pour une quelconque question quant à ce projet, me contacter à gaetan(point)schwr(at)eduge(point)ch
+Pour une quelconque question quant à ce projet, me contacter à gaetan(point)schwartz(at)epfl(point)ch
